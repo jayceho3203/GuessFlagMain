@@ -62,6 +62,7 @@ struct ContentView: View {
             ], center: .top, startRadius: 200, endRadius: 700)
                 .ignoresSafeArea()
             VStack{
+                Spacer()
                 Text("Guess the flag")
                     .font(.largeTitle.bold())
                     .foregroundStyle(.white)
@@ -89,14 +90,14 @@ struct ContentView: View {
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                
+                Spacer()
                 Text("Total Score: \(totalScore)")
-                    .font(.largeTitle)
-                    .foregroundStyle(.indigo)
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(Color(red: 0.75, green: 0.15, blue: 0.25))
                     .padding(20)
-                    .background(.mint)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                
+                    .background(Color(red: 0.1, green: 0.2, blue: 0.45))
+                    .cornerRadius(15)
+                Spacer()
             }
             
             // Show alert
