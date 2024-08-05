@@ -7,6 +7,16 @@
 // 1.Add an @State property to store the user’s score, modify it when they get an answer right or wrong, then display it in the alert and in the score label.
 import SwiftUI
 
+struct FlagImage: View {
+    var imageName: String
+    
+    var body: some View {
+        Image(imageName)
+            .clipShape(Capsule())
+            .shadow(color: .indigo, radius: 5)
+    }
+}
+
 struct ContentView: View {
     
     func flagTapped(_ number: Int){
@@ -80,9 +90,7 @@ struct ContentView: View {
                         Button{
                             flagTapped(number)
                         }label: {
-                            Image(countries[number])
-                                .clipShape(Capsule())
-                                .shadow(color: .indigo, radius: 5)
+                            FlagImage(imageName: countries[number])
                         }
                     }
                 }
